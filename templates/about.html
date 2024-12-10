@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            /* 确保内容在视频上方 */
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted playsinline>
+        <source src="{% static 'images/186115-877653483_large.mp4' %}" type="video/mp4">
+    </video>
+    <div class="content">
+        <ul>
+            <li>
+                <h2>游戏名称：</h2>
+                <h3>打地鼠小游戏</h3>
+            </li>
+            <li>
+                <h2>作者姓名：</h2>
+                <h3>胡振鹏</h3>
+            </li>
+            <li>
+                <h2>开发时间：</h2>
+                <h3>2024/9/11</h3>
+            </li>
+            <li>
+                <h2>项目背景：</h2>
+                <h3>打地鼠（Whack-a-Mole）是一款经典的休闲类小游戏，旨在通过简单的操作和快速的反应为用户提供娱乐体验。本项目的目标是开发一个基于网页的打地鼠游戏，使用户能够在任何支持浏览器的设备上轻松访问和游玩。此游戏的设计目标是提高用户的反应速度，同时提供简单、易上手的游戏体验，适合所有年龄段的玩家。
+                </h3>
+            </li>
+            <li>
+                <h2>受众群体</h2>
+                <h3>
+                    <ul>
+                        <li>儿童和青少年：作为一种简单的反应速度训练工具。</li>
+                        <li>休闲玩家：喜欢轻松、快速上手的小游戏的玩家群体。</li>
+                        <li>教育类用户：通过游戏激发反应能力，提高动手能力和手眼协调。</li>
+                    </ul>
+                </h3>
+            </li>
+            <li>
+                <h2>联系方式：</h2>
+                <h3>hotmail邮箱:huzhengpeng@hotmail.com</h3>
+
+            </li>
+        </ul>
+        <a href="../index"
+            style="display: flex;flex-direction: row;align-items: center;justify-content: center;"><button>返回</button></a>
+    </div>
+</body>
+
+
+<script>
+
+</script>
+
+</html>

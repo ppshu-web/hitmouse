@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打地鼠小游戏</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <style>
+        span {
+            float: left;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 20px;
+            margin: 8px 10px 0 10px;
+            box-shadow: 0 0 0 1px #90c197 inset;
+            transition: box-shadow 0.3s ease 0s;
+            font-weight: bold;
+            color: #90c197;
+        }
+
+        a:hover span {
+            box-shadow: 0 0 0 20px #90c197 inset;
+            color: #fff;
+        }
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            /* 确保内容在视频上方 */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <video autoplay loop muted playsinline>
+        <source src="{% static 'images/186115-877653483_large.mp4' %}" type="video/mp4">
+    </video>
+
+    <!-- 开始界面 -->
+    <div id="start-screen" class="screen">
+        <h1>欢迎来到打地鼠小游戏</h1>
+        <ul>
+            <li class="one" style="list-style: none;">
+                <button id="start-game-button"><span>开始</span></button>
+            </li>
+        </ul>
+        <ul>
+            <li class="two" style="list-style: none;">
+                <button id="settings-button"><span>设置</span></button>
+            </li>
+        </ul>
+        <ul>
+            <li class="three" style="list-style: none;">
+                <a href="../about"><button id="about-button"><span>关于</span></button></a>
+            </li>
+        </ul>
+        <ul>
+            <li class="four" style="list-style: none;">
+                <a href="../help"><button id="help-button"><span>帮助</span></button></a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <!-- 设置界面 -->
+    <div id="settings-screen" class="screen" style="display: none;">
+        <h1>游戏设置</h1>
+        <label for="speed">地鼠出现速度 (毫秒):</label>
+        <input type="number" id="speed" value="1000" min="200">
+
+        <label for="game-time">游戏时长 (秒):</label>
+        <input type="number" id="game-time" value="30" min="5">
+
+        <button id="return-button">返回</button>
+    </div>
+
+    <!-- 游戏界面 -->
+    <div id="game-screen" class="screen" style="display: none;">
+        <h1>打地鼠小游戏</h1>
+        <div id="score">分数: 0</div>
+
+        <div class="grid">
+            <div class="hole" id="hole1">
+                <img src="{% static 'images/mole.png' %}" class="mole-img" alt="Mole"
+                    style="width: 100%;height:100%;object-fit: cover;">
+            </div>
+            <div class="hole" id="hole2">
+                <img src="{% static 'images/mole.png' %}" class="mole-img" alt="Mole"
+                    style="width: 100%;height:100%;object-fit: cover;">
+            </div>
+            <div class="hole" id="hole3">
+                <img src="{% static 'images/mole.png' %}" class="mole-img" alt="Mole"
+                    style="width: 100%;height:100%;object-fit: cover;">
+            </div>
+            <div class="hole" id="hole4">
+                <img src="{% static 'images/mole.png' %}" class="mole-img" alt="Mole"
+                    style="width: 100%;height:100%;object-fit: cover;">
+            </div>
+            <div class="hole" id="hole5">
+                <img src="{% static 'images/mole.png' %}" class="mole-img" alt="Mole"
+                    style="width: 100%;height:100%;object-fit: cover;">
+            </div>
+            <div class="hole" id="hole6">
+                <img src="{% static 'images/mole.png' %}" class="mole-img" alt="Mole"
+                    style="width: 100%;height:100%;object-fit: cover;">
+            </div>
+            <div class="hole" id="hole7">
+                <img src="{% static 'images/mole.png' %}" class="mole-img" alt="Mole"
+                    style="width: 100%;height:100%;object-fit: cover;">
+            </div>
+            <div class="hole" id="hole8">
+                <img src="{% static 'images/mole.png' %}" class="mole-img" alt="Mole"
+                    style="width: 100%;height:100%;object-fit: cover;">
+            </div>
+            <div class="hole" id="hole9">
+                <img src="{% static 'images/mole.png' %}" class="mole-img" alt="Mole"
+                    style="width: 100%;height:100%;object-fit: cover;">
+            </div>
+        </div>
+
+        <button id="stop-button">停止游戏</button>
+        <button id="restart-button">重新开始游戏</button>
+        <div id="timer">剩余时间: 30 秒</div>
+    </div>
+
+    <!-- 设置界面 -->
+    <div id="settings-screen" class="screen" style="display: none;">
+        <h1>游戏设置</h1>
+        <label for="speed">地鼠出现速度 (毫秒):</label>
+        <input type="number" id="speed" value="1000" min="200">
+
+        <label for="game-time">游戏时长 (秒):</label>
+        <input type="number" id="game-time" value="30" min="5">
+
+        <button id="return-button">返回</button>
+    </div>
+
+    <script src="{% static 'JS/script.js' %}"></script>
+</body>
+
+</html>

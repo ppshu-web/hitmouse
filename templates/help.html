@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打地鼠小游戏 - 帮助介绍</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            /* 确保内容在视频上方 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <video autoplay loop muted playsinline>
+        <source src="{% static 'images/186115-877653483_large.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="content">
+        <h1>打地鼠小游戏</h1>
+
+        <h2>游戏玩法</h2>
+        <p>打地鼠是一款经典的休闲小游戏，玩家需要通过点击洞里随机冒出的地鼠来获得分数。游戏通常是限时的，玩家需要在规定的时间内尽可能多地击中地鼠。</p>
+
+        <h2>游戏规则</h2>
+        <ul>
+            <li>当地鼠出现在洞中时，点击地鼠可以得分。</li>
+            <li>游戏开始时，计时器会倒计时。</li>
+            <li>在时间结束前，尽可能多的打中地鼠获得高分。</li>
+        </ul>
+
+        <h2>操作说明</h2>
+        <ol>
+            <li>点击“开始游戏”按钮，游戏将启动。</li>
+            <li>当地鼠随机出现在不同洞口时，迅速点击它们得分。</li>
+            <li>当时间用完时，游戏结束，你可以查看分数并选择重新开始游戏。</li>
+        </ol>
+
+        <h2>游戏功能</h2>
+        <ul>
+            <li>随机出现地鼠：地鼠会随机出现在不同的洞中，增加游戏的趣味性。</li>
+            <li>计分系统：每次成功击中地鼠，分数会增加。</li>
+            <li>计时器：游戏有倒计时功能，结束时显示最终分数。</li>
+            <li>重新开始：游戏结束后可以重新开始游戏，分数和时间将重置。</li>
+        </ul>
+        <button id="return">返回</button>
+
+    </div>
+
+</body>
+
+<script>
+    document.querySelector("#return").addEventListener("click", () => window.location = "../index");
+</script>
+
+</html>

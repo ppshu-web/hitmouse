@@ -1,0 +1,178 @@
+/* style.css */
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.screen {
+    margin-top: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #8B4513;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mole-img {
+    width: 80px;
+    height: 80px;
+    display: none;
+    /* 初始时隐藏地鼠 */
+}
+
+.hole.mole img {
+    display: block;
+    /* 让地鼠显示 */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#start-screen ul{
+    position: absolute;
+}
+
+#start-screen ul li{
+    width:180px;
+	height:56px;
+    border-radius: 28px;
+    text-align: left;
+}
+
+#start-screen .one{
+    line-height: 56px;
+	position: absolute;
+	left: -1920px;
+	top:100px;
+	opacity: 0;
+	transition:all 2s ease-in 0s;
+}
+#start-screen .two{
+    line-height: 56px;
+	position: absolute;
+	left: 1920px;
+	top:200px;
+	opacity: 0;
+	transition:all 2s ease-in 0s;
+}
+#start-screen .three{
+    line-height: 56px;
+	position: absolute;
+	left: -1920px;
+	top:300px;
+	opacity: 0;
+	transition:all 2s ease-in 0s;
+}
+#start-screen .four{
+    line-height: 56px;
+	position: absolute;
+	left: 1920px;
+	top:400px;
+	opacity: 0;
+	transition:all 2s ease-in 0s;
+}
+
+#start-screen .one span, #start-screen .two span, #start-screen .three span, #start-screen .four span{
+    float: left;
+	width:40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 20px;
+	margin:8px 10px 0 10px;
+	box-shadow: 0 0 0 1px #90c197 inset;
+	transition:box-shadow 0.3s ease 0s;
+	font-weight: bold;
+	color:#90c197;
+}
+
+#start-screen .one:hover span, #start-screen .two:hover span,#start-screen .three:hover span,#start-screen .four:hover span{
+    box-shadow: 0 0 0 20px #90c197 inset;
+	color:#fff;
+}
+
+
+body:hover #start-screen .one{
+    position: absolute;
+	left:-30px;
+	top:100px;
+	opacity:0.8;
+}
+
+body:hover #start-screen .two{
+    position: absolute;
+	left:-30px;
+	top:200px;
+	opacity:0.8;
+}
+
+body:hover #start-screen .three{
+    position: absolute;
+	left:-30px;
+	top:300px;
+	opacity:0.8;
+}
+
+body:hover #start-screen .four{
+    position: absolute;
+	left:-30px;
+	top:400px;
+	opacity:0.8;
+}
+
+#timer {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#settings-screen label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#settings-screen input {
+    padding: 5px;
+    font-size: 16px;
+    width: 100px;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+}
