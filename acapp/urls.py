@@ -19,8 +19,8 @@ from django.urls import path
 from game.views import index, about, help
 
 urlpatterns = [
-    path('index/', index),
-    path('about/', about),
-    path('help/', help),
+    path('', index, name='index'),
+    path('about/', about, name='about'),
+    path('help/', help, name='help'),
     path('admin/', admin.site.urls),
 ]
