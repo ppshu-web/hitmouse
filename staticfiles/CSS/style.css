@@ -3,11 +3,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-attachment: fixed;
     margin: 0;
+    position: relative; /* 确保背景和内容都在合适的层级 */
 }
 
 .screen {
+    background-image: url("/acapp/static/images/sea.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     margin-top: 150px;
     text-align: center;
     display: flex;

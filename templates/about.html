@@ -48,7 +48,7 @@
         }
 
 
-        video {
+        #aimg {
             width: 100vw;
             height: 100vh;
             object-fit: cover;
@@ -56,15 +56,12 @@
             top: 0;
             left: 0;
             z-index: -1;
-            /* 确保内容在视频上方 */
         }
     </style>
 </head>
 
 <body>
-    <video autoplay loop muted playsinline>
-        <source src="{% static 'images/186115-877653483_large.mp4' %}" type="video/mp4">
-    </video>
+    <img id="aimg" src="{% static 'images/sea.png' %}" alt="Image" style="width: 100%; height: auto;">
     <div class="content">
         <ul>
             <li>
